@@ -13,7 +13,7 @@
       rgba(7,17,31,.28) 72%,
       rgba(7,17,31,.12) 100%
     ),
-    url("../images/law-enforcement.jpg") center center / cover no-repeat;
+    url("../images/law-enforcement-bg.jpg") center center / cover no-repeat;
   border-bottom: 4px solid var(--red);
 }
 
