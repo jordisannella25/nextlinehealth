@@ -88,8 +88,8 @@
 .story-expanded-image-card img {
   width: 100%;
   height: 460px;
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   border-radius: 10px;
   background: #08172e;
