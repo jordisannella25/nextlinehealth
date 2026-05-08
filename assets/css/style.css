@@ -1951,40 +1951,55 @@ body * {
 
 @media (max-width: 900px) {
   .nav {
+    position: relative;
     min-height: 92px;
     padding: 12px 18px;
-  }
-
-  .nav-logo img {
-    height: 110px;
-    width: auto;
+    z-index: 6000;
   }
 
   .nav-links {
-    top: 92px;
-    padding: 22px 20px;
     display: none;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
     flex-direction: column;
-    gap: 16px;
+    align-items: flex-start;
+    padding: 34px 38px 38px;
+    gap: 24px;
+    z-index: 5999;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.22);
   }
 
   .nav-links.active {
     display: flex;
   }
 
+  .nav-links > a,
+  .nav-dropbtn {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.78);
+    text-transform: uppercase;
+    padding: 0;
+  }
+
   .nav-dropdown {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    height: auto;
+    display: block;
+    position: relative;
   }
 
   .nav-dropbtn {
     width: 100%;
     text-align: left;
-    padding: 14px 0;
-    font-size: 15px;
-    color: rgba(255,255,255,0.75);
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
   }
 
   .dropdown-menu {
@@ -1993,10 +2008,15 @@ body * {
     width: 100%;
     min-width: 100%;
     background: rgba(255,255,255,0.06);
-    border: none;
+    border: 1px solid rgba(255,255,255,0.08);
     box-shadow: none;
-    margin-top: 8px;
+    margin-top: 18px;
     padding: 8px 0;
+    border-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
   }
 
   .nav-dropdown.active .dropdown-menu {
@@ -2005,14 +2025,18 @@ body * {
 
   .dropdown-menu a {
     display: block;
-    padding: 14px 18px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.78) !important;
+    padding: 15px 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.76) !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: normal;
   }
 
   .dropdown-menu a:hover {
-    color: var(--red) !important;
     background: transparent;
+    color: #fff !important;
+    padding-left: 18px;
   }
 
   .hero-stats {
