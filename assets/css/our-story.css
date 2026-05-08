@@ -16,6 +16,7 @@
     rgba(7,17,31,.38) 100%
   ),
   url("../images/our-story-bg.jpg") center center / cover no-repeat;
+  border-bottom: 4px solid var(--red);
 }
 
 .story-page-hero-content {
