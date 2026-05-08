@@ -198,5 +198,18 @@
         >
       </div>
     </footer>
+    <script>
+  function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const dropdown = event.currentTarget.closest(".nav-dropdown");
+    dropdown.classList.toggle("active");
+  }
+</script>
   </body>
 </html>
