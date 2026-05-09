@@ -289,15 +289,19 @@
       color: rgba(255,255,255,.72);
     }
 
-    .apple-card a {
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-weight: 900;
-      color: #fff;
-      margin-top: 22px;
-      display: inline-flex;
-    }
+    .apple-card {
+  text-decoration: none;
+}
+
+.apple-card-link {
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 22px;
+  display: inline-flex;
+}
 
     .veterans-card { background: linear-gradient(135deg,#0d1f3c,#405679); }
     .responders-card { background: linear-gradient(135deg,#07111f,#173a59); }
@@ -615,32 +619,32 @@
 
 <section class="category-nav">
   <div class="container apple-grid">
-    <div class="apple-card veterans-card">
+    <a href="veteran-resources.html" class="apple-card veterans-card">
       <div>
         <span>Veterans</span>
         <h2>For those who served.</h2>
         <p>VA services, crisis support, behavioral health, housing, employment, family, and recovery resources.</p>
       </div>
-      <a href="#veterans">View Veterans Resources →</a>
-    </div>
+      <span class="apple-card-link">View Veteran Resources →</span>
+    </a>
 
-    <div class="apple-card responders-card">
+    <a href="first-responder-resources.html" class="apple-card responders-card">
       <div>
         <span>First Responders</span>
         <h2>Support for those who respond.</h2>
         <p>Crisis support, peer networks, behavioral health, recovery, and survivor resources.</p>
       </div>
-      <a href="#responders">View First Responder Resources →</a>
-    </div>
+      <span class="apple-card-link">View First Responder Resources →</span>
+    </a>
 
-    <div class="apple-card community-card">
+    <a href="community-resources.html" class="apple-card community-card">
       <div>
         <span>Community</span>
         <h2>Care for the community.</h2>
         <p>Crisis lines, therapy access, basic needs, housing, employment, and legal support.</p>
       </div>
-      <a href="#community">View Community Resources →</a>
-    </div>
+      <span class="apple-card-link">View Community Resources →</span>
+    </a>
   </div>
 </section>
 
