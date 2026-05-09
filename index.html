@@ -763,18 +763,27 @@
     </footer>
     <script src=" https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.104.1/dist/umd/supabase.min.js "></script>
     <script src="assets/js/subscribe.js"></script>
-    <script>
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-  }
+   <script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
 
-  function toggleDropdown(event) {
+function toggleDropdown(event) {
+  if (window.innerWidth <= 900) {
     event.preventDefault();
     event.stopPropagation();
 
-    const dropdown = event.currentTarget.closest(".nav-dropdown");
-    dropdown.classList.toggle("active");
+    const currentDropdown = event.currentTarget.closest(".nav-dropdown");
+
+    document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+      if (dropdown !== currentDropdown) {
+        dropdown.classList.remove("active");
+      }
+    });
+
+    currentDropdown.classList.toggle("active");
   }
+}
 </script>
   </body>
 </html>
