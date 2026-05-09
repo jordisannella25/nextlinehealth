@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXJHYKM3SJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-RXJHYKM3SJ");
+  </script>
+
+  <meta name="google-site-verification" content="PejJXgFPxCPPhZZsV98CMyaqrxGgqkMzJcb46YQjuBo" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Community Resources | NextLine Health</title>
+
+  <meta
+    name="description"
+    content="Community support resources for mental health, crisis support, housing, employment, healthcare, recovery, legal aid, and wellness."
+  />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .resources-hero{
+      background:
+        linear-gradient(
+          to right,
+          rgba(7,17,31,0.98) 0%,
+          rgba(7,17,31,0.92) 42%,
+          rgba(7,17,31,0.58) 70%,
+          rgba(7,17,31,0.18) 100%
+        ),
+        url("assets/images/resources.png");
+
+      background-size:cover;
+      background-position:right center;
+      background-repeat:no-repeat;
+      padding:118px 48px 105px;
+      border-bottom:4px solid var(--red);
+      color:#fff;
+    }
+
+    .resources-hero h1{
+      font-size:62px;
+      line-height:1.02;
+      font-weight:900;
+      max-width:920px;
+      margin-bottom:22px;
+    }
+
+    .resources-hero p{
+      font-size:18px;
+      line-height:1.75;
+      color:rgba(255,255,255,.76);
+      max-width:780px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:34px;
+    }
+
+    .crisis-strip{
+      background:var(--navy-deep);
+      padding:26px 48px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .crisis-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.1fr repeat(4,1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+
+    .crisis-title{
+      color:#fff;
+      padding:20px 0;
+    }
+
+    .crisis-title span{
+      display:block;
+      font-size:11px;
+      color:var(--red);
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .crisis-title strong{
+      font-size:24px;
+      line-height:1.15;
+      font-weight:900;
+    }
+
+    .crisis-card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      padding:18px;
+      color:#fff;
+      border-radius:16px;
+      transition:.2s ease;
+    }
+
+    .crisis-card:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.09);
+      border-color:rgba(178,34,52,.55);
+    }
+
+    .crisis-card h3{
+      font-size:15px;
+      line-height:1.25;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .crisis-card p{
+      font-size:13px;
+      line-height:1.5;
+      color:rgba(255,255,255,.65);
+      margin-bottom:10px;
+    }
+
+    .crisis-card a{
+      color:#fff;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+    }
+
+    .search-panel{
+      background:#fff;
+      padding:42px 48px 30px;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:800;
+    }
+
+    .search-grid{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr auto;
+      gap:18px;
+      align-items:center;
+    }
+
+    .resource-search{
+      width:100%;
+      border:1.5px solid var(--border);
+      border-radius:18px;
+      padding:18px 20px;
+      font-size:16px;
+      font-family:inherit;
+      outline:none;
+      background:#fafafa;
+    }
+
+    .filter-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .filter-btn{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--navy);
+      padding:12px 16px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:900;
+      cursor:pointer;
+      font-family:inherit;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover{
+      background:var(--navy);
+      color:#fff;
+      border-color:var(--navy);
+    }
+
+    .resources-section{
+      padding:85px 48px;
+      background:var(--off-white);
+    }
+
+    .section-head{
+      max-width:920px;
+      margin-bottom:38px;
+    }
+
+    .section-head h2{
+      font-size:42px;
+      line-height:1.1;
+      font-weight:900;
+      color:var(--navy-deep);
+      margin-bottom:12px;
+    }
+
+    .section-head p{
+      font-size:16px;
+      line-height:1.75;
+      color:var(--text-muted);
+    }
+
+    .resource-group{
+      margin:32px 0 48px;
+    }
+
+    .resource-group h3{
+      font-size:17px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:18px;
+      font-weight:900;
+    }
+
+    .resource-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .resource-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+      min-height:170px;
+      box-shadow:0 8px 24px rgba(0,0,0,.05);
+      transition:.2s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .resource-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 34px rgba(0,0,0,.1);
+      border-color:rgba(178,34,52,.45);
+    }
+
+    .resource-card h4{
+      font-size:18px;
+      line-height:1.25;
+      font-weight:900;
+      color:var(--navy-deep);
+      margin-bottom:8px;
+    }
+
+    .resource-card p{
+      font-size:14px;
+      line-height:1.55;
+      color:var(--text-muted);
+      margin-bottom:14px;
+    }
+
+    .badge-row{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .badge{
+      display:inline-flex;
+      padding:6px 9px;
+      border-radius:999px;
+      background:var(--off-white);
+      color:var(--navy);
+      font-size:10px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:900;
+    }
+
+    .badge.crisis{
+      background:rgba(178,34,52,.1);
+      color:var(--red);
+    }
+
+    .badge.gov{
+      background:rgba(13,31,60,.1);
+      color:var(--navy);
+    }
+
+    .badge.health{
+      background:rgba(50,90,130,.12);
+      color:#173a59;
+    }
+
+    .badge.support{
+      background:rgba(90,90,90,.1);
+      color:#333;
+    }
+
+    .resource-card a{
+      display:inline-flex;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      color:var(--red);
+    }
+
+    .no-results{
+      display:none;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      color:var(--text-muted);
+      margin-top:30px;
+    }
+
+    @media(max-width:1100px){
+      .crisis-inner{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .resource-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .search-grid{
+        grid-template-columns:1fr;
+      }
+
+      .filter-row{
+        justify-content:flex-start;
+      }
+    }
+
+    @media(max-width:900px){
+      .resources-hero,
+      .crisis-strip,
+      .search-panel,
+      .resources-section{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .resources-hero{
+        padding-top:80px;
+        padding-bottom:78px;
+      }
+
+      .resources-hero h1{
+        font-size:42px;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn-red,
+      .btn-ghost{
+        width:100%;
+        text-align:center;
+      }
+
+      .crisis-inner,
+      .resource-grid{
+        grid-template-columns:1fr;
+      }
+
+      .search-panel{
+        position:relative;
+        top:auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn" type="button" onclick="toggleDropdown(event)">
+        Who We Serve
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="veterans.html">Veterans</a>
+        <a href="law-enforcement.html">Law Enforcement</a>
+        <a href="first-responders.html">First Responders</a>
+        <a href="civilians.html">Civilians</a>
+        <a href="federal-government.html">Federal Government</a>
+        <a href="behavioral-health-providers.html">Behavioral Health Providers</a>
+      </div>
+    </div>
+
+    <a href="index.html#services">Services</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="index.html#partner">Partner With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="resources.html">Resources</a>
+  </div>
+
+  <div class="nav-right">
+    <a class="nav-cta" href="inquire.html">Inquire</a>
+
+    <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="resources-hero">
+  <div class="container">
+    <div class="rule"></div>
+
+    <div class="eyebrow">Community Resource Directory</div>
+
+    <h1>Community support resources for mental health, crisis, and life stability.</h1>
+
+    <p>
+      Access public support systems including crisis intervention, therapy,
+      substance use recovery, housing, employment, family services,
+      legal aid, healthcare, and specialized care resources.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#community-resources" class="btn-red">Explore Resources</a>
+      <a href="#resource-search-panel" class="btn-ghost">Search Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="crisis-strip">
+  <div class="crisis-inner">
+
+    <div class="crisis-title">
+      <span>Immediate Support</span>
+      <strong>If this is urgent, start here.</strong>
+    </div>
+
+    <div class="crisis-card">
+      <h3>988 Suicide & Crisis Lifeline</h3>
+      <p>24/7 emotional crisis support and suicide prevention.</p>
+      <a href="https://988lifeline.org/" target="_blank">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Crisis Text Line</h3>
+      <p>Text HOME to 741741 for immediate support.</p>
+      <a href="https://www.crisistextline.org/" target="_blank">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>SAMHSA Helpline</h3>
+      <p>Substance use and mental health treatment referrals.</p>
+      <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>National Domestic Violence Hotline</h3>
+      <p>24/7 confidential domestic violence support.</p>
+      <a href="https://www.thehotline.org/" target="_blank">Visit Resource →</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="search-panel" id="resource-search-panel">
+  <div class="search-grid">
+
+    <input
+      id="resourceSearch"
+      class="resource-search"
+      type="text"
+      placeholder="Search community resources..."
+    />
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="crisis">Crisis</button>
+      <button class="filter-btn" data-filter="mental health">Mental Health</button>
+      <button class="filter-btn" data-filter="housing">Housing</button>
+      <button class="filter-btn" data-filter="employment">Employment</button>
+      <button class="filter-btn" data-filter="legal">Legal</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="resources-section" id="community-resources">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Community</div>
+
+      <h2>Community resources</h2>
+
+      <p>
+        General crisis, mental health, substance use, healthcare,
+        housing, employment, family, legal, and specialized support
+        resources for individuals and families.
+      </p>
+    </div>
+
+    <div id="community-resources-list"></div>
+
+    <div class="no-results" id="noResults">
+      No community resources matched your search.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+    <span>Veteran-Owned · Behavioral Health · Community Support</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const dropdown = event.currentTarget.closest(".nav-dropdown");
+  dropdown.classList.toggle("active");
+}
+
+const community = {
+  "Mental Health & Behavioral Health": [
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
+    ["Mental Health America","Mental health screening and support.","https://www.mhanational.org/","mental health"],
+    ["Open Path Psychotherapy Collective","Affordable therapy network.","https://openpathcollective.org/","mental health therapy"]
+  ],
+
+  "Housing & Basic Needs": [
+    ["United Way 211","Housing, food, utilities, and local assistance.","https://www.211.org/","housing support"],
+    ["Feeding America","Food bank network and hunger relief.","https://www.feedingamerica.org/","food support"],
+    ["HUD Housing Assistance","Federal housing assistance resources.","https://www.hud.gov/","housing government"]
+  ],
+
+  "Employment & Career Support": [
+    ["CareerOneStop","Career tools and job search support.","https://www.careeronestop.org/","employment government"],
+    ["Goodwill Job Training Programs","Workforce training and support.","https://www.goodwill.org/","employment"],
+    ["Indeed Career Guide","Career advice and job search education.","https://www.indeed.com/career-advice","employment"]
+  ],
+
+  "Legal & Advocacy": [
+    ["Legal Services Corporation","Civil legal aid resources.","https://www.lsc.gov/","legal"],
+    ["ACLU","Civil rights advocacy and education.","https://www.aclu.org/","legal advocacy"],
+    ["USA.gov Legal Help","Federal legal aid resources.","https://www.usa.gov/legal-aid","legal government"]
+  ]
+};
+
+function badgeFor(tags){
+  const badges = [];
+
+  if(tags.includes("crisis")) badges.push(`<span class="badge crisis">Crisis</span>`);
+  if(tags.includes("government")) badges.push(`<span class="badge gov">Government</span>`);
+  if(tags.includes("mental health")) badges.push(`<span class="badge health">Mental Health</span>`);
+  if(tags.includes("housing")) badges.push(`<span class="badge support">Housing</span>`);
+  if(tags.includes("employment")) badges.push(`<span class="badge support">Employment</span>`);
+  if(tags.includes("legal")) badges.push(`<span class="badge support">Legal</span>`);
+
+  return badges.slice(0,3).join("");
+}
+
+function renderResources(data, target){
+  const container = document.getElementById(target);
+
+  Object.entries(data).forEach(([group, items]) => {
+
+    const section = document.createElement("div");
+    section.className = "resource-group";
+
+    section.innerHTML = `
+      <h3>${group}</h3>
+      <div class="resource-grid"></div>
+    `;
+
+    const grid = section.querySelector(".resource-grid");
+
+    items.forEach(([name, desc, url, tags]) => {
+
+      const searchable =
+        `${name} ${desc} ${group} ${tags}`.toLowerCase();
+
+      const card = document.createElement("div");
+
+      card.className = "resource-card";
+      card.dataset.search = searchable;
+      card.dataset.tags = tags.toLowerCase();
+
+      card.innerHTML = `
+        <div>
+          <div class="badge-row">
+            ${badgeFor(tags.toLowerCase())}
+          </div>
+
+          <h4>${name}</h4>
+
+          <p>${desc}</p>
+        </div>
+
+        <a href="${url}" target="_blank">
+          Visit Resource →
+        </a>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    container.appendChild(section);
+  });
+}
+
+renderResources(community, "community-resources-list");
+
+const searchInput = document.getElementById("resourceSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const noResults = document.getElementById("noResults");
+
+let activeFilter = "all";
+
+function applyFilters(){
+
+  const query = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".resource-card");
+
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+
+    const search = card.dataset.search || "";
+    const tags = card.dataset.tags || "";
+
+    const matchesQuery =
+      !query || search.includes(query);
+
+    const matchesFilter =
+      activeFilter === "all" ||
+      tags.includes(activeFilter);
+
+    if(matchesQuery && matchesFilter){
+      card.style.display = "flex";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  noResults.style.display =
+    visibleCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", applyFilters);
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    filterButtons.forEach(b =>
+      b.classList.remove("active")
+    );
+
+    btn.classList.add("active");
+
+    activeFilter = btn.dataset.filter;
+
+    applyFilters();
+  });
+});
+</script>
+
+</body>
+</html>
