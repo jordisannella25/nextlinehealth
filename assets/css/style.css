@@ -4053,12 +4053,6 @@ body * {
     width: 100%;
   }
 }
-.hero-inner {
-  background: rgba(7, 17, 31, 0.18);
-  padding: 24px 28px;
-  border-radius: 12px;
-  backdrop-filter: blur(2px);
-}
 
 @media (max-width: 900px) {
   .hero-inner {
