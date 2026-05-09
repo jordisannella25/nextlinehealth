@@ -109,7 +109,7 @@
         rgba(7,17,31,.58) 55%,
         rgba(7,17,31,.42) 100%
       ),
-      url("../images/first-responders.jpg") center center / cover no-repeat;
+      url("../images/first-responders-bg.jpg") center center / cover no-repeat;
   }
 
   .fr-hero-content h1 {
