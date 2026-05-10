@@ -921,3 +921,61 @@
     padding-top: 58px !important;
   }
 }
+/* ===== FINAL HERO + TICKER ALIGNMENT FIX ===== */
+
+.veteran-page-hero {
+  border-bottom: 4px solid var(--red) !important;
+  margin-bottom: 0 !important;
+}
+
+.vt-reality {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.vt-ticker-wrap {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  margin-left: calc(50% - 50vw) !important;
+  padding: 16px 0 !important;
+  background: var(--navy-deep) !important;
+  border-top: 0 !important;
+  border-bottom: 3px solid var(--red) !important;
+  overflow: hidden !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.vt-ticker-track {
+  display: flex !important;
+  width: max-content !important;
+  gap: 46px !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  animation: vt-ticker 32s linear infinite !important;
+}
+
+.vt-ticker-track span {
+  white-space: nowrap !important;
+}
+
+.vt-reality-inner {
+  padding-top: 80px !important;
+}
+
+@media (max-width: 900px) {
+  .vt-ticker-wrap {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    padding: 15px 0 !important;
+  }
+
+  .vt-ticker-track {
+    gap: 34px !important;
+  }
+
+  .vt-reality-inner {
+    padding-top: 60px !important;
+  }
+}
