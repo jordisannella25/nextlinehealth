@@ -232,3 +232,46 @@
     font-size: 21px;
   }
 }
+/* ===== VETERANS MOBILE HERO BLUR OVERLAY FIX ===== */
+@media (max-width: 900px) {
+  .veteran-page-hero {
+    position: relative;
+    min-height: 620px;
+    padding: 42px 20px 72px;
+    align-items: flex-start;
+    background: url("../images/veterans-bg.jpg") center center / cover no-repeat;
+  }
+
+  .veteran-page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 17, 31, 0.48);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .veteran-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+  }
+
+  .veteran-hero-content h1,
+  .veteran-hero-content p,
+  .hero-eyebrow {
+    text-shadow: 0 3px 14px rgba(0,0,0,0.7);
+  }
+
+  .veteran-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.06;
+  }
+
+  .veteran-hero-content p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
