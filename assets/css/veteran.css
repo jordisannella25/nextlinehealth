@@ -979,3 +979,62 @@
     padding-top: 60px !important;
   }
 }
+/* ===== JOURNEY SECTION COLOR CLEANUP ===== */
+
+.vt-step.active {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-left-color: rgba(255, 255, 255, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.vt-step:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-left-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+.vt-step-num {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.vt-step.active .vt-step-num,
+.vt-step.active .vt-step-arrow {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.vt-connector-gap-label {
+  color: rgba(255, 255, 255, 0.34) !important;
+}
+
+.vt-panel {
+  border-top-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+.vt-panel-tag.problem {
+  display: none !important;
+}
+
+.vt-panel-tag.solution {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.vt-panel-tag.solution {
+  font-size: 0 !important;
+}
+
+.vt-panel-tag.solution::after {
+  content: "THE NEXTLINE SOLUTION";
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 900;
+}
+
+.vt-panel-nextline {
+  background: rgba(255, 255, 255, 0.045) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.vt-panel-nextline p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
