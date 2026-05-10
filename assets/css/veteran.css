@@ -840,3 +840,33 @@
     font-size: 72px;
   }
 }
+/* ===== FIX STATS STRIP GAP / FULL WIDTH ===== */
+
+.vt-reality {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.vt-ticker-wrap {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-top: 0 !important;
+  background: var(--navy-deep) !important;
+  border-top: none !important;
+  border-bottom: 3px solid var(--red) !important;
+  padding: 26px 0 !important;
+}
+
+.vt-ticker-track {
+  width: max-content;
+  padding-left: 40px;
+}
+
+.veteran-page-hero {
+  margin-bottom: 0 !important;
+}
+
+.veteran-page-hero + .vt-reality {
+  margin-top: 0 !important;
+}
