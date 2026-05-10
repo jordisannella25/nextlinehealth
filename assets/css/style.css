@@ -4055,13 +4055,24 @@ body * {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    min-height: 620px;
+    padding: 42px 20px 72px;
+    align-items: flex-start;
+  }
+
+  .hero::after {
+    background: rgba(7, 17, 31, 0.42);
+  }
+
   .hero-inner {
-    max-width: 100%;
     width: 100%;
-    background: rgba(7, 17, 31, 0.34);
-    padding: 24px 20px 28px;
-    border-radius: 14px;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    max-width: 100%;
+    margin-top: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 }
