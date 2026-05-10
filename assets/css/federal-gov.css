@@ -492,3 +492,9 @@ blockquote {
     min-height: auto;
   }
 }
+/* ===== FEDERAL MOBILE HERO SIMPLE NAVY BACKGROUND OVERRIDE ===== */
+@media (max-width: 900px) {
+  .hero-federal {
+    background: var(--navy) !important;
+  }
+}
