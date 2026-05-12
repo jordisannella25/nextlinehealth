@@ -429,6 +429,7 @@
     <a href="our-story.html">Our Story</a>
     <a href="index.html#partner">Partner With Us</a>
     <a href="index.html#contact">Contact</a>
+<<<<<<< Updated upstream
     <div class="nav-dropdown">
   <button class="nav-dropbtn" type="button" onclick="toggleDropdown(event)">
     Resources
@@ -441,6 +442,9 @@
     <a href="community-resources.html">For Community</a>
   </div>
 </div>
+=======
+    <a href="resources.html">Resources</a>
+>>>>>>> Stashed changes
   </div>
 
   <div class="nav-right">
@@ -557,6 +561,7 @@
 </section>
 
 <footer>
+<<<<<<< Updated upstream
   <div class="footer-top">
     <div>
       <div class="footer-brand">
@@ -605,6 +610,11 @@
   <div class="footer-bottom">
     <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
     <span>Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Community Support</span>
+=======
+  <div class="footer-bottom">
+    <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+    <span>Veteran-Owned · Behavioral Health · Community Support</span>
+>>>>>>> Stashed changes
   </div>
 </footer>
 
@@ -617,6 +627,7 @@ function toggleDropdown(event) {
   event.preventDefault();
   event.stopPropagation();
 
+<<<<<<< Updated upstream
   const currentDropdown = event.currentTarget.closest(".nav-dropdown");
 
   document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
@@ -703,6 +714,35 @@ const community = {
     ["USA.gov","Federal government resource directory.","https://www.usa.gov/","government directory"],
     ["Benefits.gov","Federal benefits eligibility and information.","https://www.benefits.gov/","government financial directory"],
     ["FindHelp.org","Search local social services by ZIP code.","https://www.findhelp.org/","directory housing financial support"]
+=======
+  const dropdown = event.currentTarget.closest(".nav-dropdown");
+  dropdown.classList.toggle("active");
+}
+
+const community = {
+  "Mental Health & Behavioral Health": [
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
+    ["Mental Health America","Mental health screening and support.","https://www.mhanational.org/","mental health"],
+    ["Open Path Psychotherapy Collective","Affordable therapy network.","https://openpathcollective.org/","mental health therapy"]
+  ],
+
+  "Housing & Basic Needs": [
+    ["United Way 211","Housing, food, utilities, and local assistance.","https://www.211.org/","housing support"],
+    ["Feeding America","Food bank network and hunger relief.","https://www.feedingamerica.org/","food support"],
+    ["HUD Housing Assistance","Federal housing assistance resources.","https://www.hud.gov/","housing government"]
+  ],
+
+  "Employment & Career Support": [
+    ["CareerOneStop","Career tools and job search support.","https://www.careeronestop.org/","employment government"],
+    ["Goodwill Job Training Programs","Workforce training and support.","https://www.goodwill.org/","employment"],
+    ["Indeed Career Guide","Career advice and job search education.","https://www.indeed.com/career-advice","employment"]
+  ],
+
+  "Legal & Advocacy": [
+    ["Legal Services Corporation","Civil legal aid resources.","https://www.lsc.gov/","legal"],
+    ["ACLU","Civil rights advocacy and education.","https://www.aclu.org/","legal advocacy"],
+    ["USA.gov Legal Help","Federal legal aid resources.","https://www.usa.gov/legal-aid","legal government"]
+>>>>>>> Stashed changes
   ]
 };
 
@@ -826,4 +866,8 @@ filterButtons.forEach(btn => {
 </script>
 
 </body>
+<<<<<<< Updated upstream
 </html>
+=======
+</html>
+>>>>>>> Stashed changes
