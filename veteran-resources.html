@@ -628,20 +628,8 @@ function toggleDropdown(event) {
   event.preventDefault();
   event.stopPropagation();
 
-<<<<<<< Updated upstream
-  const currentDropdown = event.currentTarget.closest(".nav-dropdown");
-
-  document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
-    if (dropdown !== currentDropdown) {
-      dropdown.classList.remove("active");
-    }
-  });
-
-  currentDropdown.classList.toggle("active");
-=======
   const dropdown = event.currentTarget.closest(".nav-dropdown");
   dropdown.classList.toggle("active");
->>>>>>> Stashed changes
 }
 
 const veterans = {
